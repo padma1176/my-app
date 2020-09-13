@@ -1,0 +1,65 @@
+.card-deck{
+    margin : 10px;  
+}
+.card-deck .card{
+    border-width: 2px !important;
+    border-color: black;
+    border-radius: 10px;
+}
+.card-img-top{
+    width: min-content;
+    margin-left: 17px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-width: 5px;
+    border-color: black;
+}
+.card-body{
+    margin-left: 80px;
+    margin-top: -90px;
+}
+@media (max-width: 414px) { 
+    .card-body{
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+}
+#banner{
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* height: 20%; */
+    background-color: rgba(138, 132, 127, 0.295);
+    /* background-image:url(/src/assets/bg.jpg) no-repeat center top; */
+    
+}
+#banner_body {
+    margin-top: 0px;
+    margin-left: 0px;  
+}  
+
+#banner img{
+    width: 10%;
+    height: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* align-content: center; */
+    /* left: 45%; */
+}
+.card :hover{
+    cursor: pointer;
+}
+.card-title{
+    font-weight: bold;
+    position: relative;
+    left: 0px;
+    text-align: center;
+    
+}
+.card_title{
+    text-transform: uppercase;
+}

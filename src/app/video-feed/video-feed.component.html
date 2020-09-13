@@ -1,0 +1,30 @@
+<!-- <div *ngFor="let video of videos">
+    <h2>{{video.title}} {{video.original_name}} </h2>
+  
+      <p>
+        {{video.overview}}<br>
+        {{video.release_date}}
+        {{video.first_air_date}}
+      </p>
+
+      <img src="https://image.tmdb.org/t/p/w45{{video.poster_path}}" alt="poster image"> -->
+      <!-- <a href="https://image.tmdb.org/t/p/w45{{video.poster_path}}">Read full article</a> -->
+  <!-- </div> -->
+  <div id="banner" class="card mb-3" >
+    <img id="banner_img" class="card-img-top" src="https://image.tmdb.org/t/p/w45{{poster_path}}" alt="Card image cap">
+    <div id='banner_body' class="card-body">
+      <h5  class="card-title">{{name}}</h5>
+    </div>
+  </div>
+  <pagination-controls (pageChange)="p=$event"></pagination-controls>
+
+  <div class="card-deck" *ngFor="let video of videos  | paginate:{itemsPerPage: 5, currentPage:p}" >
+    <div class="card" (click)="onCardclick($event,video.title || video.original_name,video.poster_path)"style = "hover:cursor">
+        <img class="card-img-top" src="https://image.tmdb.org/t/p/w45{{video.poster_path}}" alt="Card image cap" style="max-width: 10rem; max-height: 15rem;">
+      <div id="list" class="card-body">
+        <h5 class="card_title">{{video.title}} {{video.original_name}}</h5>
+        <p class="card-text">{{video.overview}} </p>
+        <p class="card-text"><small class="text-muted">Release Date: {{video.release_date}}{{video.first_air_date}}</small></p>
+      </div>
+    </div>
+    
